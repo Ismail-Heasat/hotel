@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b8a58bc95c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+</head>
+<body>
+    <header class="header" id="navigation-menu">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/logo.jpeg" alt="logo image">
+                </a>
+                <ul class="nav-menu">
+                    <li> <a onclick="topFunction()" href="#home" class="nav-list">Home</a> </li>
+                    <li> <a href="#Membership" class="nav-list">Membership</a> </li>
+                    <li> <a href="#stay-options-container" class="nav-list">Stay options</a> </li>
+                    <li> <a href="#dining-options" class="nav-list">Dining</a> </li>
+                    <li> <a href="#amenities" class="nav-list">activities</a> </li>
+
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+
+   
+    <div class="hotel-front-container">
+        <img src="https://raw.githubusercontent.com/MichaelZhou334/Hotel-Landing-Page/main/images/hotel_front.jpg" alt="picture of the front of the hotel" class="hotel-front">
+       </div>
+
+       <div class="welcome-text">
+        <h2>Beautiful gymkhana</h2>
+        <p>Gymkhana Vehari is a distinguished resort in Vehari, offering luxury, leisure, and sports facilities for its members. It features elegant accommodations, diverse dining options, and extensive recreational amenities including swimming pools, sports courts for cricket, football, and tennis, as well as indoor games like table tennis and chess. Additionally, it hosts a modern cinema for entertainment. Designed to foster community and provide a superior experience, Gymkhana Vehari is an exclusive haven for relaxation and social engagement.</p>
+       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <section id="Membership">
+        <div id="membership-registration-container">
+            <h2>Join Our Exclusive Membership</h2>
+            <form id="membershipRegistrationForm">
+                <!-- Member Information -->
+                <fieldset>
+                    <legend>Member Information</legend>
+                    <label for="memberName">Name:</label>
+                    <input type="text" id="memberName" name="memberName" required>
+        
+                    <label for="memberEmail">Email:</label>
+                    <input type="email" id="memberEmail" name="memberEmail" required>
+        
+                    <label for="membershipPackage">Membership Package:</label>
+                    <select id="membershipPackage" name="membershipPackage" required>
+                        <option value="">Select a Package</option>
+                        <option value="silver">Silver</option>
+                        <option value="gold">Gold</option>
+                        <option value="platinum">Platinum</option>
+                    </select>
+                </fieldset>
+        
+                <!-- Family Member Information -->
+                <fieldset>
+                    <legend>Family Member Information</legend>
+                    <label for="familyMemberName">Family Member's Name:</label>
+                    <input type="text" id="familyMemberName" name="familyMemberName">
+        
+                    <label for="relation">Relation:</label>
+                    <select id="relation" name="relation">
+                        <option value="">Select Relation</option>
+                        <option value="spouse">Spouse</option>
+                        <option value="child">Child</option>
+                        <option value="parent">Parent</option>
+                        <option value="sibling">Sibling</option>
+                    </select>
+                </fieldset>
+        
+                <button onclick="displayThankYouMessage()" type="button" id="submitBtn">Register Now</button>
+                <div id="registrationMessage"></div>
+            </form>
+        </div>
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="stay-options-container">
+    <h2>Explore Our Stay Options</h2>
+    <div class="rooms-container">
+        <!-- Luxury Room -->
+        <div class="room luxury">
+            <img src="img/luxuryRoom.jpeg" alt="Luxury Room" class="room-image">
+            <div class="room-details">
+                <h3>Luxury Room </h3>
+                <p>Experience unparalleled comfort and elegance in our luxury rooms, designed for those who appreciate the finer things in life.</p>
+            </div>
+        </div>
+
+        <!-- Normal Room -->
+        <div class="room normal">
+            <img src="img/HotelNormalRoom.webp" alt="Normal Room" class="room-image">
+            <div class="room-details">
+                <h3>Normal Room </h3>
+                <p>A perfect blend of comfort and value, our normal rooms offer a cozy stay with all essential amenities.</p>
+            </div>
+        </div>
+    </div>
+
+    <form id="bookingForm">
+        <label for="roomType">Choose Your Room:</label>
+        <select id="roomType" name="roomType" required>
+            <option value="luxury">Luxury Room </option>
+            <option value="normal">Normal Room </option>
+        </select>
+
+        <label for="beds">Number of Beds:</label>
+        <select id="beds" name="beds" required>
+            <option value="1">1 Bed</option>
+            <option value="2">2 Beds</option>
+            <option value="3">3 Beds</option>
+        </select>
+
+        <button onclick="displayThankYouMessagebookingForm()" type="button">Book Your Stay</button>
+
+        <div id="bookingFormMassage"></div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="dining-options">
+    <h2>Exquisite Dining Experiences</h2>
+    <div class="dining-category" id="breakfast">
+        <img src="img/Breakfast.jpeg" alt="Breakfast">
+        <div class="overlay">
+            <h3>Breakfast</h3>
+            <p>Start your day right with our gourmet breakfast selections.</p>
+        </div>
+    </div>
+    <div class="dining-category" id="lunch">
+        <img src="img/lunch.webp" alt="Lunch">
+        <div class="overlay">
+            <h3>Lunch</h3>
+            <p>Discover the flavors of our diverse lunch menu, crafted to satisfy.</p>
+        </div>
+    </div>
+    <div class="dining-category" id="dinner">
+        <img src="img/dinner.jpeg" alt="Dinner">
+        <div class="overlay">
+            <h3>Dinner</h3>
+            <p>End your day with a culinary journey through our dinner offerings.</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="amenities">
+    <!-- Swimming Pool Section -->
+    <div class="amenity" id="swimming-pool">
+        <img src="img/Swimming Pool.jpeg" alt="Swimming Pool">
+        <h3>Swimming Pool and Competitions</h3>
+        <p>Our state-of-the-art swimming pool is perfect for both leisure and competitive swimming.</p>
+        <button  onclick=" bookingMessage()">Book Now</button>
+        <div id="Swimmingbtn"></div>
+    </div>
+
+    <!-- Indoor Games Section -->
+    <div class="amenity" id="indoor-games">
+        <img src="img/table tennis.webp" alt="Indoor Games">
+        <h3>Indoor Games</h3>
+        <p>Choose from a variety of games including table tennis, chess, and ludo for fun indoor activities.</p>
+        <button onclick="bookingMessageIndoorGames()">Book Now</button>
+        <div id="IndoorGames"></div>
+    </div>
+
+    <!-- Outdoor Games Section -->
+    <div class="amenity" id="outdoor-games">
+        <img src="img/Outdoor Games.jpeg" alt="Outdoor Games">
+        <h3>Outdoor Games</h3>
+        <p>Enjoy our outdoor sports facilities for cricket, football, tennis, and snooker.</p>
+        <button onclick="bookingMessageOutdoorGames()">Book Now</button>
+        <div id="OutdoorGames"></div>
+    </div>
+
+    <!-- Cinema Section -->
+    <div class="amenity" id="cinema">
+        <img src="img/Cinema.webp" alt="Cinema">
+        <h3>Cinema</h3>
+        <p>Book your tickets for the latest movies including Batman, Superman, and Harry Potter.</p>
+        <button onclick="bookingMessageCinema()">Book Now</button>
+        <div id="CinemaBooking"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  <hr class="footer-line">
+
+    <div class="footer">
+        <div class="col-1">
+            <div>
+            <h2>How can we help?</h2>
+            <button class="btn">Request a Call</button>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+
+            </div>
+
+        </div>
+        </div>
+       
+    </div>
+    <script src="script.js"></script>
+    </body>
+    </html>
